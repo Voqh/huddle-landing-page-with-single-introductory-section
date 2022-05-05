@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root{
+--Violet: hsl(257, 40%, 49%);
+--Soft-Magenta: hsl(300, 69%, 71%);
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 20px;
+    padding: 20px;
+    font-family:'Barlow Semi Condensed', sans-serif;
+    font-weight: 400;
+    background: url(images/bg-mobile.svg),var(--Violet);
+    background-repeat: no-repeat;
+    color: white;
+    line-height: 1.4;
+}
+
+.logo img{
+    max-width: 50%;
+    max-height: 50%;
+}
+.banner{
+    padding: 3rem 0;
+}
+.banner img{
+max-width: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size:x-large;
+}
+.content p{
+    opacity: 0.7;
+    margin-top: 0;
+}
+.content button{
+    color: var(--Violet);
+    padding: 8px 60px;
+    border: none;
+    border-radius:30px ;
+    background-color: white;
+}
+.container button:hover{
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+footer{
+    text-align: center;}
+.fa-brands{
+    padding: 4px;
+    border: solid 1px white;
+    border-radius: 16px;
+    margin: 40px 4px;
+}
+.fa-brands:hover{
+    border:solid var(--Soft-Magenta) 1px;
+    color: var(--Soft-Magenta);
+}
+@media (min-width:400px){
+    body{
+        background: url(images/bg-desktop.svg),var(--Violet);
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+.logo img{
+    max-width: 15%;
+    max-height: 15%;
+}    
+.banner{
+    padding: 1rem;
+    }
+.container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns:1.5fr 1fr;
+}
+.content h1{
+    font-size: 2.5rem;
+}
+.content p{
+font-size: 1.2rem;
+}
+.content button{
+    align-self: flex-start;
+    padding: 10px 50px;
+    font-size: 1.2rem;
+}
+footer{
+    text-align: end;
+}
+.fa-brands{
+    margin: 0px 4px;
+}
+}
